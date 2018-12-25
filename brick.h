@@ -12,8 +12,6 @@ class Brick {
   public:
     Brick(int, int);
     ~Brick();
-
-  public:
     bool isDestroyed();
     void setDestroyed(bool);
     QRect getRect();
