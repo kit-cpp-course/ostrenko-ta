@@ -15,7 +15,7 @@ class Breakout : public QWidget {
   Q_OBJECT
 
   public:
-    Breakout(QWidget *parent = 0);
+    Breakout(QWidget *parent = 0);//виджет-окно
     ~Breakout();
 
   protected:
@@ -26,7 +26,6 @@ class Breakout : public QWidget {
     void drawObjects(QPainter *);
     void finishGame(QPainter *, QString);
     void moveObjects();
-
     void startGame();
     void pauseGame();
     void stopGame();
@@ -36,9 +35,9 @@ class Breakout : public QWidget {
   private:
     int x;
     int timerId;
-    static const int N_OF_BRICKS = 56;
-    static const int DELAY = 9;
-    static const int BOTTOM_EDGE = 500;
+    static const int N_OF_BRICKS = 56;//количество кирпичей
+    static const int DELAY = 10;//интервал для таймера 10 миллисекунд
+    static const int BOTTOM_EDGE = 500;//нижний край игрового поля 
     Ball *ball;
     Paddle *paddle;
     Brick *bricks[N_OF_BRICKS];
